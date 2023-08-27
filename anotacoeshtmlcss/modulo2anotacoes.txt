@@ -1,0 +1,186 @@
+Para configurar uma CSS globalmente, é necessario usar *, segue o exemplo:
+
+		   * {
+               	   height: 100%;
+           	 }
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Existem 4 posições no CSS, left, right, top e bottom
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Podemos fazer dois tipos de degrade, em circulo, e degrade normal, exemplos:
+
+    body {
+        background-image: linear-gradient(to top, green, yellow);
+    } 
+
+ou
+
+    body {
+        background-image: radial-gradient(circle, green, yellow);
+    }
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Podemos centralizar o conteúdo da pagina usando a o seguinte comando: IMPORTANTE
+
+    margin: auto;
+
+Já para centralizar um imagem, utiliza-se a seguinte linha:
+
+		img {
+    		   display: block;
+    		   margin: auto;
+  		}
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------(border-radius: Xpx) serve para arredondar as bordas de algo
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Anatomia do tipo:
+
+o tamanho base de todas as letras minuscúlas, é baseado na letra "x" também miníscula, e o nome dessa altura é altura-x;
+
+em algumas letras, como "b,k,l" essa altura-x pode ser excedida para cima, sendo um pouco mais altas que o normal de x, então, essa altura elevada é nomeada de ascendente;
+
+também tem letras com tamanho elevados para baixo, como o "g,j, q" e essa sobra para baixo é nomeada de descendente;
+
+também há letras maiúsculas, que são mais altas que todas as outras, tendo sua altura nomeada de "altura das maiúsculas";
+
+todas as alturas juntando as 4 acima citadas, é chamada de "corpo" envolvendo a altura das maiusculas, altura-x, descendente e ascendente, e essa altura do corpo que configuramos usando o CSS.
+
+-----------------                            ---------------------
+Categorias de fontes: IMPORTANTE
+
+- serifada
+- sans-serif
+- monoespaçada (com ou sem serifa)
+- handwriting
+- display
+
+--------------------                        ----------------------
+Font size: IMPORTANTE
+Medidas absolutas:
+- cm, mm, in, (px), pt, pc;
+
+Medidas relativas:
+-(em), ex, rem, vw, vh, %;
+
+"medidas entre () representam as recomendadas a se usar";
+
+1 polegada = 2,54cm;
+
+1em = 16px ou tamanho do font-size em "px";
+
+Podemos também adicionar todas as atribuições de uma fonte em uma só linha, usando a seguinte ordem:
+
+      font: "font-style" "font-weight" "font-size" 'font-family"
+
+e trocar todos as tags dentro de "" por sua respectiva característica.
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------
+Fontes externas baixadas: IMPORTANTE
+
+para inserir uma fonte baixada no site, usaremos o seguinte ex:
+
+	@font-face {
+    		font-family: ;
+    		src: url();
+		}
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Pseudo-classes:
+
+quando vamos usar um seletor, podemos nos referir aos filhos deste seletor de uma maneira muito facil no css, se quisermos colorir um paragrafo dentro de uma div sem colocar uma id nele, podemos usar o seguinte exemplo:
+
+	div > p {
+		color: red
+	}
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Pseudo-elementos:
+
+diferenças de pseudo-elemento, pseudo-classe e children:
+"vou usar como exemplo a tag "div" mas pode ser qualquer uma"
+
+-Pseudo-classe = div:hover
+-Pseudo-elemento = div::hover
+-Children = div > p
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Grouping tags(divs semânticas):
+
+-Header = Cabeçalho;
+-Main = Conteúdo principal da página;
+-Footer = Rodapé;
+-Nav = Navegação, normalmente usado para fazer um menu;
+-Section = Tipo um tópico;
+-Article = Artigo;
+-Aside = Algo referente ao article;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Circulo com border-radius:
+
+Usando a tag border-radius podemos fazer um circulo, tanto para ser um botão quanto para outro uso, precisamos apenas criar uma div sem nenhum elemento dentro, e usar o border-radius no css em 50%, assim teremos um circulo perfeito, e é claro, ajustar a height e a width para formar um quadrado antes.
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Variáveis em CSS: IMPORTANTE
+
+Usando a tag :root {}, podemos dar nomes a tags que usamos muito, para facilitar o trabalho, exemplo:
+
+		:root {
+		     --cor01: blue
+	   	     --cor02: red
+		     --fonte-padrao: Arial, sans-serif
+		     --font-size-padrao: 16px
+		}
+
+E por ai vai, na hora de usar esse nomes dados as tags, é só chamar o var(--cor01), ao contrario de colocar somente ela, isso facilita na hora de trocar uma paleta de cores por exemplo, trocando a paleta de cores do root, todas as cores da pagina serao trocadas.
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Problemas de responsividade do conteúdo e imagem: IMPORTANTE
+
+O conteúdo pode não ser responsivo quando definimos uma largura(width) fixa, pois ele vai se manter nela sempre e nao vai se adaptar, para resolver isso é simples:
+
+  Basta trocar a tag "width", por "min-width" e "max-width".
+ O "max-width" deve ser o tamanho que seria colocado em "width".
+Já o "min-width" deve ser sempre "320px" ou "none" se for menor.
+
+Para resolver responsividade com imagem, apenas colocar "width" em "100%" já resolve.
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------
+Exemplo de responsividade com video iframe: IMPORTANTE
+
+    div.video {
+        background-color: #1A5A37;
+        margin: 0px -20px 30px -20px;
+        padding: 20px;
+        padding-bottom: 56.88%;
+        position: relative;
+    }
+
+    div.video > iframe {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+    }
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------

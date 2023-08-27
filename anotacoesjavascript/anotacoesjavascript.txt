@@ -1,0 +1,115 @@
+Identificadores:
+
+-Podem começar com letra, $ ou _
+-Não podem começar com números
+-É possível usar letras ou números
+-É possível usar acentos e símbolos
+-Não podem conter espaços
+-Não podem ser palavras reservadas
+
+----------------------------------------------------------------
+Data Types:
+
+-number
+-string
+-boolean
+
+----------------------------------------------------------------Guardar informações:
+
+Podemos guardar informações de um usuário, como o nome por exemplo, criando uma variavel(var),dando um nome para ela, até mesmo (nome) já que queremos guardar o nome da pessoa, e usar o seguinte comando:
+
+       var nome = window.prompt('Qual é o seu nome?')
+       alert('É um grande prazer em te conhecer, ' + nome + '!')
+
+Esse comando vai perguntar o nome da pessoa, e após ela responder, ele irá mostrar a mensagem "É um grande prazer em te conhecer, (nome)!"
+
+----------------------------------------------------------------
+Conversões:
+
+Todo comando window.prompt, nos retorna uma string, e nunca um numero, entao em uma soma de numeros por exemplo, se respondermos 2 + 2 nesse prompt, ele retornará 22, e não 4, e o motivo é:
+
++ adição = número
++ concatenação = string
+
+--------------                                 -----------------
+
+Então para um window.prompt retornar um número e não string, ou converter uma string para number, devemos usar um dos comandos abaixo antes do comando principal:
+
+- Number.parseInt(n) = Números Inteiros
+- Number.parseFloat(n) = Números Reais
+- Number(n) = Deixa o vscode descobrir se é real ou inteiro, melhor de usar
+
+Exemplos abaixo:
+
+var n1 = Number.parseInt(window.prompt('Digite um número'))
+var n2 = Number.parseFloat(window.prompt('Digite outro número'))
+var n3 = Number(window.prompt('Digite mais um número'))
+
+--------------                                 -----------------
+
+Também temos como converter um number para string, usando um dos comando abaixo antes do comando principal:
+
+- String(n) = Deixa o vscode decidir, simplificando e ficando melhor de usar
+- n.toString = Falamos que queremos que 'n' seja uma string e não número
+
+----------------------------------------------------------------
+Template Strings:
+
+Para diminuir o código e deixar mais organizado, podemos usar template string ao inves de fechar aspas e adicionar a string toda vez que for escrever um texto.
+
+É só usarmos crase ao inves de aspas, e colocar o simbolo ${} e dentro dele escrever o nome dado a string, exemplo:
+
+nome = 'artur'
+idade = 15
+var s = 'java'
+
+`o aluno ${nome} com ${idade} anos esta aprendendo ${s}`
+
+	e o resultado será
+
+'o aluno artur com 15 anos esta aprendendo java'
+
+----------------------------------------------------------------
+Formatação de String:
+
+Podemos usar alguns comandos para formatar a nossa string, deixando ela com letras maiúsculas, minúsculas, e contando quantas letras tem nela.
+
+s.length = diz quantas letras tem a string
+s.toUpperCase() = deixa a string com letras maiúsculas
+s.toLowerCase() = deixa a string com letras minúsculas
+
+Exemplos:
+
+var nome = window.prompt('Qual é seu nome?')
+document.write(`Seu nome tem ${nome.length} letras!`)
+
+Esse exemplo pergunta o nome da pessoa, e mostra na página quantas letras tem esse nome.
+
+----------------------------------------------------------------
+Formatação de numbers:
+
+Podemos fazer um n1, com qualquer número e numeros com ., por exemplo 1545.5, podemos deixar ele com duas casas decimais, e fazer virar 1545.50, também podemos representar como dinheiro e por ai vai.
+
+n1.toFixed(2) = faz o n1 ter duas casas decimais
+n1.toFized(2).replace('.', ',') = troca o ponto por virgula
+
+n1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) = faz o n1 1545.50 aparecer como dinheiro, com $ ou qualquer outra moeda, basta trocar o BRL pela moeda do país desejado
+----------------------------------------------------------------
+Aritméticos: 
+
++ = soma
+- = subtração
+* = multiplicação
+/ = divisão
+% = resto da divisão
+** = potência/ao quadrado
+
+----------------------------------------------------------------
+Ordem de precedência dos operadores de aritmética:
+
+|()
+|**
+|* | / | %
+V + | -
+
+----------------------------------------------------------------

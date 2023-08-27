@@ -1,0 +1,76 @@
+Alinhamento:
+
+Para deixar elementos lado a lado, podemos usar o comando no css:
+
+	display: inline-block;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Background Shorthand:
+
+background: color > image > position > repeat > attachment
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Centralização vertical:
+
+Se a "position" de algo for "absolute", temos duas opções adicionais no nosso CSS, que são:
+
+-Left
+-Top
+
+Com o left e top em 50%, centralizamos algo no meio da tela, porém, ele irá centralizar a ponta superior esquerda no meio, e nao o meio da imagem, e para resolver isso podemos fazer o seguinte ajuste:
+
+	transform: translate(-50%, -50%);
+
+Assim ele se ajusta exatamente no meio da tela.
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------Tabelas em HTML:
+
+Hierarquia da tabela:
+
+   1° <table>
+      2°  <tr>
+	  3° <th>
+	  3° <td>
+
+--------------------                    ------------------------
+Primeiro abrimos a tag <TABLE>, depois, dentro dela, colocamos um table row, que é a tag <TR>, e dentro de tr podemos colcocar um cabeçalho, que é o table header, com a tag <TH>, e o conteúdo da tabela, o td, com a tag <TD>.
+
+Cada TABLE ROW é uma linha da tabela, ou seja, se uma tabela tiver 50 linhas, necessitará de 50 <TR>.
+
+--------------------                    ------------------------
+Hierarquia de tabelas grandes:
+
+     1°	<table>
+	2°  <thead>
+	    3° <tr><td><th>
+
+	2°  <tbody>
+	    3° <tr><td><th>
+
+	2°  <tfoot>
+	    3° <tr><td><th>
+
+--------------------                    ------------------------
+Efeito zebrado para tabelas grandes:
+
+Para fazer o efeito zebrado é necessario poucas linhas de css, é só usar um pseudo-elemento muito simples:
+
+            tbody > tr:nth-child(2n) {
+                background-color: grey;
+            }
+
+--------------------                    ------------------------
+Mesclagem de células:
+
+Aumentar e diminuir cada célula da tabela é muito simples, usando dois atributos na própria tag html:
+
+rowspan = expansão da linha, ou para baixo;
+
+colspan = expansão da coluna, ou para o lado;
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------

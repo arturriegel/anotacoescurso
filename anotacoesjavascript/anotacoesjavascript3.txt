@@ -1,0 +1,108 @@
+Criar elementos ao interagir: IMPORTANTE
+
+Uma imagem por exemplo:
+
+	var img = document.createElement('img')
+	img.setAttribute('src', 'caminhodaimg')
+	
+E para mostrar:
+
+	blablabla.appendChild(img)
+
+----------------                               -----------------
+Também podemos REMOVER um elemento pai ou um elemento filho, muito simples, vou usar como exemplo a remoção de uma DIV(elemento pai) com o ID CONTAINER:
+
+	var container = document.querySelector('#container')
+	container.remove()
+
+----------------                               -----------------
+E para remover um elemento filho, usando como exemplo um P dentro da DIV usada no exemplo acima, basta fazer isso:
+
+	var container = document.querySelector('#container')
+	var p = document.querySelector('#container p')
+	container.removeChild(p)
+
+----------------------------------------------------------------
+Repetição Básica: +- IMPORTANTE
+
+while = enquanto
+do = faça
+
+Repetição comumente usada:
+
+	var c = 2
+	while (c = 2) {
+	    console.log('C é igual a 2')
+	}
+
+Porém vai repetir infinitamente até C ser diferente de 2, ou até chegar no numero q quisermos somando 1, fazendo assim:
+
+	var c = 2
+	while (c <= 1000) {
+	    console.log(`C é igual a ${c}`)
+	    c++
+	}
+
+Assim ele vai fazer C ser somado a 1 até chegar a 1000.
+
+--------------------                      ----------------------
+Repetição não tão usada:
+
+	var c = 2
+	do {
+	    console.log(`C é igual a ${c}`)
+	    c++
+	} while (c <= 1000)
+
+----------------------------------------------------------------
+Repetição Simplificada:
+
+	Ordem: for (var = X; X <= X; X++)
+
+Primeiro colocamos o VAR, depois colocamos o WHILE, e depois colocamos a implementação a ser feita, tipo esse exemplo:
+
+	for (var c = 1; c <= 20; c++) {
+	    console.log(`C é igual a ${c}`)
+	} 
+Tem a mesma função das últimas duas formas de repeitção anotadas, porém, ocupa menos linhas e é simplificado.
+
+----------------------------------------------------------------
+Caixa de seleção:
+
+Podemos criar uma caixa de seleção em HTML, usando a tag <select>, e dentro dela mesma temos que dar um nome, e um tamanho pré-definido caso necessário, e como elemento filho, temos o <option>, para dar ter as opções dentro da caixa, e dentro dela mesma, temos que colocar um 'value', para diferenciar cada opção, ficaria assim no código:
+
+	<select name="artur" id="n1" size="10">
+		<option value="v1">Valor 1</option>
+		<option value="v2">Valor 2</option>
+	</select>
+
+----------------------------------------------------------------
+Variáves compostas e Arrays: IMPORTANTE P KRL
+
+Um array, vetor, ou uma variável composta é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação.]
+
+--------------------                      ----------------------
+Tem alguns parâmetros que podem ser colocados após uma array já declarada, exemplos:
+
+let num = [2,4,5]  //Array declarada
+
+num[3] = 6  //Adiciona o n°6 na 3ª vaga contando com o a vaga 0 
+
+num.push(7)  //Adiciona o n°7 na última vaga do array
+
+num.sort()  //".sort" Vai organizar a array em ordem crescente
+
+num.indexOf(4)  //Procura um valor e diz em qual posição está
+
+--------------------                      ----------------------
+"For" usado em Arrays: IMPORTANTE
+
+Podemos simplificar o uso do for quando ele é usado em arrays, fazendo assim:
+
+	var num = [2,5,7,9]
+
+	for (var pos "in" num) {
+		console.log(num[pos])
+	}
+
+----------------------------------------------------------------

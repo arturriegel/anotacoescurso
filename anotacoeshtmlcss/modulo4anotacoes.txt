@@ -1,0 +1,132 @@
+Usando o IFRAME:
+
+Com a tag:
+
+      <iframe src="link do site" frameborder="0"></iframe>
+
+   Podemos inserir um site completamente diferente do nosso dentro de uma pequena janela, criada usando o iframe, exceto alguns site que contém proteção contra iframes, um ex é o google.
+
+--------------------                         ---------------------
+Configurações do IFRAME: (((IMPORTANTE, SEGURANÇA!!!)))
+
+- Tudo que estiver como child do iframe vai ser exibido caso o dispositivo usado não seja compatível com iframes;
+
+- Width e Height podem ser definidos com atributo do próprio iframe, porém, caso tenha um CSS definindo esses valores, é ele quem prevalecerá (tamanho padrão: 300x150);
+
+- Colocando um NAME no iframe, podemos usá-lo para abrir outros sites após criar um link, setando o nome nele, e colocando o target="nome do iframe" no link;
+
+- Para ter o máximo de segurança do usuário dentro do iframe, temos que utilizar dois atributos nele, o (sandbox="sandbox") e o (referrerpolicy="no-referrer"), assim, não há possibilidade de hackers coletarem dados através do iframe;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------
+Formulários:
+
+   Devem ser usados dentro de uma tag <form action=""></form>, na qual a ACTION="", deve conter o nome do arquivo da linguagem de programação que irá receber os dados do formulário ao clicar no botão submit.
+
+Uso dos inputs:
+
+  - Botão Enviar = input submit;
+  - Senha = input password;
+  - Botão Limpar = input reset;
+  - Data = input date;
+  - Mês = input month;
+  - Horário = input time;
+  - Telefone = input tel;
+  - Email = input email;
+  - Caixa de múltipla escolha = input checkbox;
+  - Caixa de seleção única = input radio;
+  - Seletor de cores = input color;
+  - Enviar Arquivo = input file;
+
+
+Outras tags interessantes:
+
+  - Caixa de seleção em input text = DATALIST com OPTION dentro;
+  - Caixa de texto = TEXTAREA;
+  - Grupo de opções na lista = OPTGROUP LABEL="nome do grupo";
+
+--------------------                         ---------------------
+Segurança dos Formulários:
+
+   Para ter uma segurança a mais nos formulário, sem que a resposta apareça na URL do site, há um parâmetro muito simples que pode ser usado, é o METHOD="".
+
+   method="GET" = Mostra a resposta na URL, segurança -
+   method="POST" = Não mostra a resposta na URL, segurança +
+
+--------------------                         ---------------------
+Complementos de um formulário:
+
+- REQUIRED = é colocado dentro do input , e faz com que seja obrigatório o preenchimento daquele campo;
+
+- MIN & MAXLENGTH = são colocados no input e definem o mínimo e o máximo de carácteres que podem ser colocados em um campo;
+
+- AUTOCOMPLETE = quando colocado no FORM, mostra todas as opções disponíveis para completar automaticamente um campo, porém, quando colocado no input, permite definir o que vai aparecer para ser preenchido, seja uma senha, username, e etc;
+
+- PLACEHOLDER = é colocado no input e serve para escrever dentro do campo dando um exemplo do que deve ser preenchido, além de sumir ao escrever algo no campo;
+
+- FIELDSET = quando envelopamos o CONTEÚDO dentro de FORM, com a tag <fieldset></fieldset>, criamos um campo ao redor dele, separando-o do conteúdo do site, e também, ele nos permite criar a tag <legend></legend>, que coloca um titulo nessa borda criada;
+
+--------------------                         ---------------------
+Outras curiosidades:
+
+ - No input RADIO, deve ser colocado o mesmo NAME em todas as opções, caso contrário, se for colocados nomes diferentes, será possível marcar todas as caixa com nome diferente, e não apenas uma;
+
+ - No input RADIO deve ser inserido um VALUE para cada resposta possível, para que o php receba o valor e não a resposta ON;
+
+ - Quando o INPUT FILE é usado, é obrigatório usar o METHOD POST, no FORM em que ele está presente, caso contrário só o nome do arquivo será enviado, e não o conteúdo;
+
+ - Para adicionar a caixa de seleção dentro do input text, é necessário colocar um ID no DATALIST e inserir esse ID dentro do atributo LIST, que é dado ao input;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------
+Media Queries/ Media Query:
+
+   Para usar media queries é necessário especificar o tipo de plataforma em que o css será usado, colocando o atributo MEDIA="" na tag link do arquivo css.
+   Também é possível usar as media queries no mesmo documento css que o de configurações gerais, usando como exemplo, apenas colocando a regra "@media screen and (orientation: portrait) {}" no documento, e tudo que for escrito dentro dele será apresentado na página.
+
+--------------------                         ---------------------
+Media Types:
+
+   São os tipos de PLATAFORMA na qual o site será exibido, tela, impressora, ou todos.
+
+Tipos de media type:
+
+ - Todos os tipos = media="all";
+ - Telas em geral =  media="screen";
+ - Impressão = media="print";
+
+--------------------                         ---------------------
+Media Feature:
+
+   São os tipos de TELA em que o site será exibido, celulares, computadores, televisões, modo paisagem, modo retrato e etc.
+   Para ser usado é necessário adicionar um pouco de código no MEDIA do link css, exemplo: 
+
+----EX---- media="screen and (media feature desejado)" -----EX----
+
+Tipos de media feature:
+
+ - Modo Paisagem = (orientation: landscape)
+ - Modo Retrato = (orientation: portrait)
+ - 
+
+--------------------                         ---------------------
+Device Brakpoints:
+
+   Device break points são as medidas que cada tipo de dispositivo quebra a tela no seu máximo de largura, assim que definimos para qual dispositivo será o nosso css.
+   Para isso definimos o min e o max width na hora de colocar o media feature, de acordo com o EX e os tamanhos abaixo:
+
+EX - media="screen and (min-width: 600px) and (max-width: 768px)" 
+
+Tamanhos das telas:
+
+- Pequenas Telas: até 600px;
+- Celulares: até 768px;
+- Tablets: até 992px;
+- Desktop: até 1200px;
+- Grandes Telas: acima de 1200px;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------

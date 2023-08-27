@@ -1,0 +1,35 @@
+Modificadores de acesso:
+
+-public = todas as variaveis tem acesso a classe;
+-private = somente variaveis da mesma classe tem acesso;
+-protected = mesma coisa que private;
+
+-internal = pode ser acessada por qualquer código do mesmo assembly;
+-protected internal = acessada por classe derivada do assembly, ou mesma coisa que internal;
+-private protected = só pode ser acessada por classse do mesmo assembly;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------
+Variáveis:
+
+-int = somente números não tão grandes;
+-double = somente números grandes demais;
+-float = somente números quebrados;
+-char = somente um caractér;
+-bool = sempre true ou false;
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------
+Métodos:
+
+   Métodos são uma parte do código que fazem funções específicas. Exemplo: SetDinheiro().
+   É comum uma classe ter um método construtor, que, quando executado de maneira própria, cria um objeto daquela classe.
+   Também podemos construir métodos Set (para “settar” uma variável) e Get (para conseguir um valor de uma variável).
+
+EX:	 public static void Main(string[] args)
+
+------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+------------------------------------------------------------------

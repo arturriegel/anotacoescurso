@@ -1,0 +1,120 @@
+Operadores Relacionais:
+
+> = maior que
+< = menor que
+>= = maior ou igual a
+<= = menor ou igual a
+== = igual a
+!= = diferete de
+
+----------------------------------------------------------------
+Operadores de Identidade:
+
+=== = identico a (mesmo valor e mesmo tipo)
+
+----------------------------------------------------------------
+Operadores Lógicos:
+
+! = negação = não
+&& = conjunção = e
+|| = disjunção = ou
+
+----------------------------------------------------------------
+Operadores Ternários:
+
+? = define o que acontece se for verdadeiro
+: = define o que acontece se for falso
+
+Exemplo:
+
+var média = 5.5
+média > 7?'Aprovado':'Reprovado'
+
+'Reprovado'
+
+--------------------                     -----------------------Esse exemplo define que se a média for maior ou igual a 7, resultado aprovado, e se for menor que 7, resultado reprovado.
+
+----------------------------------------------------------------
+Usando o DOM:
+
+window.documet.getElement(s)By... =
+
+----------------------------------------------------------------
+Eventos DOM:
+
+function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = 	window.document.querySelector('input#txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual 	a ${s}`
+         }
+
+----------------------------------------------------------------
+Tipos de condição:
+
+Simples:
+
+if (4 < 5) {
+    true
+}
+
+------------------                             -----------------
+Condição composta:
+
+if (12 > 15) {
+    true
+} else {
+     false
+}
+
+----------------------------------------------------------------Horário:
+
+Para pegar o horário do sistema e usar ele como texto, podemos utilizar o seguinte comando:
+
+ var agora = new Date()
+ var hora = agora.getHours()
+ var minuto = agora.getMinutes()
+ if (minuto < 10) {
+    console.log(`Agora são exatamente ${hora}:0${minuto}!`)
+ } else {
+    console.log(`Agora são exatamente ${hora}:${minuto}!`)
+ }
+
+-----------------                           --------------------
+Não precisamos pegar necessariamente a hora, mas podemos pegar dia, mês, ano, e por aaí vai, basta trocar getHours, por getMounth por exemplo, assim pegamos o mês.
+
+----------------------------------------------------------------
+Condições Múltiplas:
+
+var agora = new Date()
+var diaSem = agora.getDay()
+
+switch(diaSem) {
+    case 0 :
+        console.log('Domingo')
+        break
+    case 1: 
+        console.log('Segunda')
+        break
+    case 2 :
+        console.log('Terça')
+        break
+    case 3: 
+        console.log('Quarta')
+        break
+    case 4 :
+        console.log('Quinta')
+        break
+    case 5: 
+        console.log('Sexta')
+        break
+    case 6 :
+        console.log('Sábado')
+        break
+}
+
+----------------------------------------------------------------
+
