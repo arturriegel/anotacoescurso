@@ -1,3 +1,15 @@
 Variáveis:
 
 Toda variável é um objeto;
+
+-------------------------------------------------------------------
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-------------------------------------------------------------------
+Formatação:
+
+  As chaves{} podem ser usadas dentro de uma string para serem substituidas pela variável desejada usando .format(variavel) depois de fechar aspas, exemplo:
+
+	nome = 'Artur'
+	print('É um prazer te conhecer {}!'.format(nome))
+
+--------------------                       ------------------------
