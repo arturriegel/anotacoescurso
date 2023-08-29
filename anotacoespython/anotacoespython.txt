@@ -29,4 +29,9 @@ Tipos Primitivos:
 -str = 'string'
 
 --------------------                       ------------------------
-...
+  Os tipos primitivos podem ter várias funcionalidades, e uma delas é especificar o tipo de conteudo que o input irá receber caso for diferente de uma string, por exemplo, se quisermos somar dois numeros e colocarmos dois inputs, ele irá concatenar e nao somar por ser strings, mas uma jeito fácil de resolver é:
+
+	n1 = int(input('Escreva um número: '))
+	n2 = int(input('Escreva outro número: '))
+
+--------------------                       ------------------------
