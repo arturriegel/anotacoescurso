@@ -7,6 +7,7 @@ Criar nova tabela:
 
 	use dbexemplo;
 	create table tbexemplo;
+	create table tbexemplo2 default charset = utf8;
 
 -------------------------------------------------------------------
 Mostrar tabela:
@@ -14,11 +15,35 @@ Mostrar tabela:
 	describe tbexemplo;
 
 -------------------------------------------------------------------
-Tipos primitivos:
+Excluir tabela:
 
-	varchar(x); = Texto, normalmente nomes
-	tinyint; = Pequenos usos, normalmente idade
-	char(1); = Apenas um caractér, normalmente S ou N
-	float; = Varia, normalmente peso, altura
+	drop database dbexemplo;
 
 -------------------------------------------------------------------
+Tipos primitivos:
+
+	varchar(x) = Texto, normalmente nomes;
+	tinyint = Pequenos usos, ocupa 3 bytes de memória;
+	int = Usos pouco maiores, ocupa 11 bytes de memória;
+	char(1) = Apenas um caracter, normalmente S ou N;
+	float = Varia, normalmente peso, altura;
+	date =  Datas, aniversário e etc;
+	enum('X', 'Y') = Um caracter ou outro, subttuindo X e Y;
+	decimal(5,2) = Número no formato exemplo XXX,XX;
+
+-------------------------------------------------------------------
+Configuração de caracteres acentuados(usar o comando exatamente assim):
+
+	create database cadastro
+	default character set utf8
+	default collate utf8_general_ci;
+
+-------------------------------------------------------------------
+Constraints úteis:
+
+	not null = Diz que o campo não pode ser vazio;
+	default 'PADRAO' = Caso o campo fique vazio será 'PADRAO';
+	auto_increment = Automatiza a de ordem de cadastro de id;
+
+-------------------------------------------------------------------
+	
