@@ -1,0 +1,24 @@
+Criar novo banco de dados:
+	
+	create database dbexemplo;
+
+-------------------------------------------------------------------
+Criar nova tabela:
+
+	use dbexemplo;
+	create table tbexemplo;
+
+-------------------------------------------------------------------
+Mostrar tabela:
+
+	describe tbexemplo;
+
+-------------------------------------------------------------------
+Tipos primitivos:
+
+	varchar(x); = Texto, normalmente nomes
+	tinyint; = Pequenos usos, normalmente idade
+	char(1); = Apenas um caractér, normalmente S ou N
+	float; = Varia, normalmente peso, altura
+
+-------------------------------------------------------------------
