@@ -1,28 +1,80 @@
+-------------------------------------------------------------------
+---------------------------BANCO DE DADOS--------------------------
+-------------------------------------------------------------------
 Criar novo banco de dados:
 	
-	create database dbexemplo;
+	CREATE DATABSE dbexemplo;
 
+-------------------------------------------------------------------
+Excluir banco de dados:
+
+	DROP DATABASE dbexemplo;
+
+-------------------------------------------------------------------
+------------------------------TABELAS------------------------------
 -------------------------------------------------------------------
 Criar nova tabela:
 
-	use dbexemplo;
-	create table tbexemplo;
-	create table tbexemplo2 default charset = utf8;
+	USE dbexemplo;
+	CREATE TABLE tbexemplo;
+	CREATE TABLE tbexemplo2 default charset = utf8;
 
 -------------------------------------------------------------------
-Mostrar tabela:
+Alterar nome da tabela:
 
-	describe tbexemplo;
+	ALTER TABLE tbexemplo
+	RENAME TO tbexemplo2;
 
 -------------------------------------------------------------------
-Excluir tabela:
+Mostrar construção da tabela:
 
-	drop database dbexemplo;
+	DESCRIBE(ou DESC) tbexemplo;
+
+Mostrar registros da tabela:
+	
+	SELECT * FROM tbexemplo;
+
+-------------------------------------------------------------------
+------------------------------COLUNAS------------------------------
+-------------------------------------------------------------------
+Adicionar nova coluna:
+
+	ALTER TABLE tbexemplo
+	ADD COLUMN clmnexemplo;
+
+-------------------------------------------------------------------
+Excluir coluna:
+
+	ALTER TABLE tbexemplo
+	DROP COLUMN clmnexemplo;
+
+-------------------------------------------------------------------
+Alterar construção da coluna:
+
+	ALTER TABLE tbexemplo
+	MODIFY COLUMN clmnexemplo VARCHAR(15) DEFAULT 'exemplo';
+
+-------------------------------------------------------------------
+Alterar nome da coluna:
+
+	ALTER TABLE tbmexemplo
+	CHANGE COLUMN clmnexemplo clmnexemplo2;
+
+-------------------------------------------------------------------
+----------------------------ADICIONAIS-----------------------------
+-------------------------------------------------------------------
+Inserir valores aos registros:
+
+	INSERT INTO tbexemplo
+	(nome, nascimento, peso)
+	VALUES
+	('Artur', '2008-03-15', '79.00');
 
 -------------------------------------------------------------------
 Tipos primitivos:
 
-	varchar(x) = Texto, normalmente nomes;
+	varchar(x) = Até 30 letras, se sobrar espaço ele não ocupa;
+	char(x) = Até 30 letras, se faltar caract ocupa com espaço;
 	tinyint = Pequenos usos, ocupa 3 bytes de memória;
 	int = Usos pouco maiores, ocupa 11 bytes de memória;
 	char(1) = Apenas um caracter, normalmente S ou N;
@@ -34,16 +86,19 @@ Tipos primitivos:
 -------------------------------------------------------------------
 Configuração de caracteres acentuados(usar o comando exatamente assim):
 
-	create database cadastro
-	default character set utf8
-	default collate utf8_general_ci;
+	CREATE DATABASE cadastro
+	DEFAULT CHARACTER set utf8
+	DEFAULT COLLATE utf8_general_ci;
 
 -------------------------------------------------------------------
 Constraints úteis:
 
+	primary key = Define o id único da coluna;
 	not null = Diz que o campo não pode ser vazio;
 	default 'PADRAO' = Caso o campo fique vazio será 'PADRAO';
 	auto_increment = Automatiza a de ordem de cadastro de id;
+	unique = Não deixa ter 2 itens com o mesmo nome;
+	unsigned = Não permite números com sinais(+ -);
 
 -------------------------------------------------------------------
 	
