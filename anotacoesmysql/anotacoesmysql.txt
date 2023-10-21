@@ -61,6 +61,27 @@ Alterar nome da coluna:
 	CHANGE COLUMN clmnexemplo clmnexemplo2;
 
 -------------------------------------------------------------------
+------------------------------LINHAS-------------------------------
+-------------------------------------------------------------------
+Alterar informações da linha:
+
+	UPDATE tbexemplo
+	SET infoexemplo = 'contexemplo'
+	WHERE idexemplo = '2';
+	(LIMIT 1;)
+
+-------------------------------------------------------------------
+Apagar linha:
+
+	DELETE FROM tbexemplo
+	where idexemplo = '1';
+
+-------------------------------------------------------------------
+Apagar todas as linhas da tabela:
+
+	TRUNCATE tbexemplo;
+
+-------------------------------------------------------------------
 ----------------------------ADICIONAIS-----------------------------
 -------------------------------------------------------------------
 Inserir valores aos registros:
