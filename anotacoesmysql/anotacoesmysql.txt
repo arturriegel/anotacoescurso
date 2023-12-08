@@ -1,3 +1,8 @@
+Acessar via shell(xamp):
+
+	cd mysql
+	cd bin
+	mysql -u root -p  -h 127.0.0.1
 -------------------------------------------------------------------
 ---------------------------BANCO DE DADOS--------------------------
 -------------------------------------------------------------------
@@ -16,8 +21,13 @@ Excluir banco de dados:
 Criar nova tabela:
 
 	USE dbexemplo;
-	CREATE TABLE tbexemplo;
-	CREATE TABLE tbexemplo2 default charset = utf8;
+	CREATE TABLE tbexemplo(
+		colunas
+	);
+
+	CREATE TABLE tbexemplo2(
+		colunas
+	) default charset = utf8;
 
 -------------------------------------------------------------------
 Alterar nome da tabela:
@@ -40,7 +50,7 @@ Mostrar registros da tabela:
 Adicionar nova coluna:
 
 	ALTER TABLE tbexemplo
-	ADD COLUMN clmnexemplo;
+	ADD COLUMN clmnexemplo int;
 
 -------------------------------------------------------------------
 Excluir coluna:
@@ -92,6 +102,18 @@ Inserir valores aos registros:
 	('Artur', '2008-03-15', '79.00');
 
 -------------------------------------------------------------------
+Adicionar Chave Estrangeira:
+
+	ALTER TABLE tbexemplo
+	ADD FOREIGN KEY (clmnexemplo)
+	REFERENCES tbexemplo2(clmnexemplo2);
+
+-------------------------------------------------------------------
+Definir Chave Estrangeira:
+
+	UPDATE tbexemplo SET clmnexemplo = 'id1' where id = '2';
+
+-------------------------------------------------------------------
 Tipos primitivos:
 
 	varchar(x) = Até 30 letras, se sobrar espaço ele não ocupa;
@@ -115,6 +137,7 @@ Configuração de caracteres acentuados(usar o comando exatamente assim):
 Constraints úteis:
 
 	primary key = Define o id único da coluna;
+	foreign key = Linka informações entre tabelas;
 	not null = Diz que o campo não pode ser vazio;
 	default 'PADRAO' = Caso o campo fique vazio será 'PADRAO';
 	auto_increment = Automatiza a de ordem de cadastro de id;
