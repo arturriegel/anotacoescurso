@@ -1,0 +1,8 @@
+RASMUS LERDORF
+
+INICIO = 1994;
+ORIGEM = Canadá;
+PHP 0 = Personal Home Page;
+PHP 1 = PHP Tools;
+PHP 2 = PHP/Form Interpreter;
+PHP 3 = PHP: Hypertext Preprocessor;
