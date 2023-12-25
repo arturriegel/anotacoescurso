@@ -6,3 +6,20 @@ PHP 0 = Personal Home Page;
 PHP 1 = PHP Tools;
 PHP 2 = PHP/Form Interpreter;
 PHP 3 = PHP: Hypertext Preprocessor;
+
+------------------------------------------------------------
+PHP DATE():
+
+(Timezone config: "date_default_timezone_set("America/Sao_Paulo");")
+	date("T") = Timezone;
+
+(Formato de data deve ser separado por "/", ex: (d/M/Y))
+	date("D") = Dia da semana;
+	date("d") = Dia do mês;
+	date("M") = Mês;
+	date("Y") = Ano;
+
+(Formato de hora deve ser separado por ":", ex: (G:i:s))
+	date("G") = Hora;
+	date("i") = Minuto;
+	date("s") = Segundo.
