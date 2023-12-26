@@ -7,7 +7,7 @@ PHP 1 = PHP Tools;
 PHP 2 = PHP/Form Interpreter;
 PHP 3 = PHP: Hypertext Preprocessor;
 
-------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
 PHP DATE():
 
 (Timezone config: "date_default_timezone_set("America/Sao_Paulo");")
@@ -23,3 +23,36 @@ PHP DATE():
 	date("G") = Hora;
 	date("i") = Minuto;
 	date("s") = Segundo.
+
+----------------------------------------------------------------------------------------------------
+VARIAVEIS E CONSTANTES:
+
+	Variáveis são declaradas usando o símbolo '$' junto ao nome, ex: $cidade = "Barra do Ribeiro";
+
+	Constantes são declaradas usando "const" antes do nome, e precisam ter o nome todo maiúsculo, 
+ex: const PAIS = 2;
+
+----------------------------------------------------------------------------------------------------
+TIPOS PRIMITIVOS:
+Categorias:
+
+	Escalares:
+
+		String;
+		Int;
+		Float/Double;
+		Bool/Boolean;
+
+	Compostos:
+
+		Array;
+		Object;
+
+	Especiais:
+
+		Null;
+		Resource;
+		Callabe;
+		Mixed.
+
+----------------------------------------------------------------------------------------------------
