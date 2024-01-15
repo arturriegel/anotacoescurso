@@ -56,3 +56,20 @@ Categorias:
 		Mixed.
 
 ----------------------------------------------------------------------------------------------------
+Funções Aritméticas:
+
+	abs();
+	base_convert();
+	ceil();
+	floor();
+	round();
+	hypot();
+	intdiv();
+	min();
+	max();
+	pi()  /  M_PI;
+	pow();
+	sin();
+	cos();
+	tan();
+	sqrt();
